@@ -23,10 +23,15 @@ export class LenguageSwitchService {
       }
     }
   }
-
+  actualLenguage: string = 'spanish';
   constructor() { }
 
+  getActualLenguage(): string {
+    return this.actualLenguage;
+  }
+
   getDataToFillResume(lenguage: string): any {
+    this.actualLenguage = lenguage;
     if (lenguage === 'english') {
       return {
         navMenu: {

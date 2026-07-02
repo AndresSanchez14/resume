@@ -13,9 +13,11 @@
           {{ dataToFillShortResume.buttons.downloadCVText }}
           <mat-icon>download</mat-icon>
         </button>
-        <button mat-stroked-button color="primary" (click)="downloadCV()">
+        <button mat-stroked-button color="primary">
           <mat-icon>email</mat-icon>
-          {{ dataToFillShortResume.buttons.sendEmailText }}
+          <a href="mailto:asanchesvera@yahoo.es">
+            {{ dataToFillShortResume.buttons.sendEmailText }}
+          </a>
         </button>
       </div>
     </div>
@@ -24,7 +26,7 @@
   <div class="logos">
     <img src="assets/logos/angular-logo.png" alt="Angular Logo" class="logo-image">
     <img src="assets/logos/react-logo.png" alt="React Logo" class="logo-image">
-    <img src="assets/logos/flask-logo.png" alt="TypeScript Logo" class="logo-image">
+    <img src="{{ pathImgFlaskLogo }}" alt="Flask Logo" class="logo-image">
     <img src="assets/logos/nestJs-logo.png" alt="NestJS Logo" class="logo-image">
     <img src="assets/logos/spring-logo.png" alt="Spring Logo" class="logo-image">
     <img src="assets/logos/aws-logo.png" alt="AWS Logo" class="logo-image">
