@@ -18,7 +18,7 @@
     padding-left: 2rem;
 
     ul {
-      border-left: 3px dotted var(--primary);
+      border-left: 3px dotted var(--progress-style-color);
       padding-left: 0;
 
       li {
@@ -37,7 +37,7 @@
     .experience .tasks {
       padding-left: 1.5rem;
       list-style: disc;
-      color: #555;
+      color: var(--text-secondary);
       margin-top: 1rem;
     }
 

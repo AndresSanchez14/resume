@@ -28,7 +28,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataToFillResume = this.lenguageSwitchService.getDataToFillResume(this.lenguageSelected);
-    console.log('HomeComponent initialized: ', this.dataToFillResume);
+    this.darkMode = this.themeSwitchService.getPreferredTheme();
+
+    this.darkMode = this.themeSwitchService.getPreferredTheme();
+    this.themeSwitchService.toggleTheme(this.darkMode);
   }
 
   toggleTheme(): void {
@@ -40,6 +43,14 @@ export class HomeComponent implements OnInit {
   onChangueLenguageSelected(event: any): void {
     this.lenguageSelected = event.value;
     this.dataToFillResume = this.lenguageSwitchService.getDataToFillResume(this.lenguageSelected);
+  }
+
+  scrollToSection(event: Event, id: string): void {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
 

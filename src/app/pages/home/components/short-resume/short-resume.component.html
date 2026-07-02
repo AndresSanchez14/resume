@@ -1,36 +1,40 @@
-<div class="container">
-  <div class="short-introduction">
-    <div class="image-container">
-      <img src="assets/photoProfile.png" alt="profile_image" class="profile-image" width="200" height="200">
+<div class="hero-section">
+  <div class="terminal-window">
+
+    <div class="terminal-header">
+      <div class="window-buttons">
+        <span class="btn close"></span>
+        <span class="btn minimize"></span>
+        <span class="btn maximize"></span>
+      </div>
+      <span class="window-title">~/andres/perfil.sh</span>
     </div>
-    <div class="introduction-text">
-      <h1>Andres Sanchez</h1>
-      <p>Full Stack Developer | Cloud Developer</p>
-      <p>{{ dataToFillShortResume.description}}
+
+    <div class="terminal-body">
+      <p class="command"><span class="prompt">andres&#64;dev:~$</span> whoami</p>
+
+      <div class="identity">
+        <img class="avatar" src="assets/photoProfile.png" alt="Foto de perfil de Andrés Sánchez" width="88" height="88">
+        <div>
+          <h1 class="name">{{ dataToFillShortResume.name}}</h1>
+          <h2 class="role">{{ dataToFillShortResume.role }}</h2>
+        </div>
+      </div>
+
+      <p class="command mt-2"><span class="prompt">andres&#64;dev:~$</span> cat description.txt</p>
+      <p class="description">
+        {{ dataToFillShortResume.description }}
       </p>
-      <div class="buttons-short-introduction">
-        <button mat-raised-button color="primary" (click)="downloadCV()">
-          {{ dataToFillShortResume.buttons.downloadCVText }}
-          <mat-icon>download</mat-icon>
+
+      <div class="terminal-actions">
+        <button type="button" class="btn-primary" (click)="downloadCV()">
+          <span class="function">{{dataToFillShortResume.buttons.downloadCVText}}</span><span class="brackets">()</span>
         </button>
-        <button mat-stroked-button color="primary">
-          <mat-icon>email</mat-icon>
-          <a href="mailto:asanchesvera@yahoo.es">
-            {{ dataToFillShortResume.buttons.sendEmailText }}
-          </a>
-        </button>
+        <a href="javascript:void(0)" class="btn-secondary" (click)="scrollToContact($event)">
+          <span class="function">{{dataToFillShortResume.buttons.sendEmailText}}</span><span class="brackets">()</span>
+        </a>
       </div>
     </div>
-  </div>
 
-  <div class="logos">
-    <img src="assets/logos/angular-logo.png" alt="Angular Logo" class="logo-image">
-    <img src="assets/logos/react-logo.png" alt="React Logo" class="logo-image">
-    <img src="{{ pathImgFlaskLogo }}" alt="Flask Logo" class="logo-image">
-    <img src="assets/logos/nestJs-logo.png" alt="NestJS Logo" class="logo-image">
-    <img src="assets/logos/spring-logo.png" alt="Spring Logo" class="logo-image">
-    <img src="assets/logos/aws-logo.png" alt="AWS Logo" class="logo-image">
-    <img src="assets/logos/postgrest-logo.png" alt="PostgreSQL Logo" class="logo-image">
-    <img src="assets/logos/dynamoDB-logo.png" alt="DynamoDB Logo" class="logo-image">
   </div>
 </div>

@@ -36,3 +36,16 @@
     }
   }
 }
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* Espacio entre el logo y el texto */
+}
+
+.skill-item h3 {
+  margin: 0;
+  /* Quitamos el margen por defecto para que no se vea chueco */
+}

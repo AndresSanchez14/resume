@@ -1,123 +1,353 @@
+/* ==========================================
+   VARIABLES DE COLOR & AJUSTES GLOBALES
+   ========================================== */
+:host {
+  --accent-color: #58a6ff;
+  /* Azul neón de programador */
+  --accent-glow: rgba(88, 166, 255, 0.15);
+  --border-line: rgba(240, 246, 252, 0.1);
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
 .main-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  //background-color: #FFFFFF;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0d1117;
+  /* Fondo oscuro inicial */
+  transition: background-color 0.3s ease;
+  z-index: 1;
+
+  /* Textura de grano sutil */
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
 }
 
 .header {
-  position: sticky;
+  position: fixed !important;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 9999 !important;
+  background: rgba(13, 17, 23, 0.349) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--border-line) !important;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar {
-  height: 70px;
-  min-height: 70px;
+  width: 100%;
+  background: transparent !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(12px);
-  background-color: var(--background-nav);
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
-  padding: 0 1.5rem;
+  padding: 0 2rem;
+  box-shadow: none !important;
+}
 
-  .nav-links {
-    display: flex;
-    gap: 3.5rem;
+.logo a {
+  color: var(--accent-color) !important;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
 
-    .nav-link {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s ease;
+  &::after {
+    content: '_';
+    animation: blink 1s step-end infinite;
+  }
+}
 
-      hover {
-        color: #007BFF;
-      }
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  a {
+    color: #8b949e !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+
+    &:hover {
+      color: var(--accent-color) !important;
+      background: rgba(88, 166, 255, 0.1) !important;
     }
 
-  }
-
-  .actions {
-    display: flex;
-    gap: 1rem;
-
-    button {
-      mat-icon {
-        color: var(--dark-mode-icon-color);
-
-      }
+    &::before {
+      content: '.';
+      color: #ff7b72;
     }
   }
 }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: color 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    color: yellow;
+    background: var(--accent-color);
+  }
+
+  .theme-icon {
+    font-size: 22px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
 
 .home-container {
-  padding: 0 2rem;
-  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 130px 2rem 3rem 2rem;
+  /* Espacio para que el menú fijo no tape la intro */
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 1500px;
+  gap: 4rem;
+}
 
-  .contact-section {
-    margin-bottom: 0.5rem;
-  }
+.education-skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 
-  .education-skills-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: stretch;
-
-    >* {
-      flex: 0 0 calc(50% - 1rem);
-      max-width: calc(50% - 1rem);
-      box-sizing: border-box;
-
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 }
 
-.language-toggle {
-  border-radius: 30px;
-  overflow: hidden;
-  background: var(--exp-background);
-  border: 1px solid var(--exp-border-color);
-  box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);
-
-  .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }
 
-.language-toggle.mat-button-toggle-group {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(240, 246, 252, 0.1) !important;
-  border-radius: 6px !important;
-  overflow: hidden !important;
-  box-shadow: none !important;
 
-  .mat-button-toggle {
-    background-color: transparent !important;
-    border: none !important;
-    color: #8b949e !important;
-    font-family: 'Fira Code', monospace !important;
-    font-size: 0.85rem !important;
+::ng-deep {
 
-    &.mat-button-toggle-checked {
-      background-color: rgba(88, 166, 255, 0.15) !important;
-      color: var(--accent-color) !important;
-      font-weight: bold !important;
+  /* Margen maestro para las anclas (#) para que se detengan bajo el menú fijo */
+  .scroll-section {
+    scroll-margin-top: 90px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Fira Code', 'Consolas', monospace !important;
+  }
+
+  /* Estructura base limpia para las tarjetas oscuras por defecto */
+  .mat-mdc-card,
+  .mat-card,
+  app-contact>div,
+  app-education>div,
+  app-skills>div {
+    background-color: rgba(22, 27, 34, 0.7) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(12px) !important;
+    color: #c9d1d9 !important;
+  }
+
+  /* HACK DEFINITIVO PARA LA CAJA DE IDIOMAS MATERIAL (Elimina el bloque blanco feo) */
+  .language-toggle.mat-button-toggle-group {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(240, 246, 252, 0.1) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+
+    .mat-button-toggle {
+      background-color: transparent !important;
+      border: none !important;
+      color: #8b949e !important;
+      font-family: 'Fira Code', monospace !important;
+      font-size: 0.85rem !important;
+
+      &.mat-button-toggle-checked {
+        background-color: rgba(88, 166, 255, 0.15) !important;
+        color: var(--accent-color) !important;
+        font-weight: bold !important;
+      }
+
+      .mat-button-toggle-label-content {
+        padding: 0 12px !important;
+        line-height: 32px !important;
+      }
+    }
+  }
+
+  .light-theme,
+  .light-mode,
+  [theme="light"],
+  [data-theme="light"],
+  body.light-theme {
+
+    .main-container {
+      background-color: #f6f8fa77 !important;
+      color: #24292f !important;
     }
 
-    .mat-button-toggle-label-content {
-      padding: 0 12px !important;
-      line-height: 32px !important;
+    .header {
+      background: rgba(255, 255, 255, 0.822) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .nav-links a {
+      color: #57606a !important;
+
+      &:hover {
+        color: #0969da !important;
+        background: rgba(9, 105, 218, 0.06) !important;
+      }
+    }
+
+    .theme-toggle-btn {
+      color: #57606a;
+
+      &:hover {
+        color: var(--accent-color);
+        background: var(--accent-color);
+      }
+    }
+
+    .language-toggle.mat-button-toggle-group {
+      background-color: rgba(0, 0, 0, 0.03) !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+      .mat-button-toggle {
+        color: #57606a !important;
+
+        &.mat-button-toggle-checked {
+          background-color: rgba(9, 105, 218, 0.08) !important;
+          color: #0969da !important;
+        }
+      }
+    }
+
+    /* Modificamos el fondo e invertimos los colores de las tarjetas */
+    .mat-mdc-card,
+    .mat-card,
+    app-contact>div,
+    app-education>div,
+    app-skills>div {
+      background-color: #ffffff !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+      color: #24292f !important;
+    }
+
+    p,
+    span,
+    .text-muted,
+    mat-icon,
+    h4,
+    h5,
+    li,
+    div,
+    th,
+    td,
+    a {
+      color: #24292f !important;
+    }
+
+    h2 {
+      color: #0969da !important;
+    }
+
+    .mat-mdc-chip,
+    .mat-chip {
+      background-color: rgba(9, 105, 218, 0.06) !important;
+      border: 1px solid rgba(9, 105, 218, 0.2) !important;
+      color: #0969da !important;
+
+      i,
+      span,
+      h3 {
+        color: #0969da !important;
+      }
+    }
+
+    /* ==========================================
+       LA TERMINAL SIEMPRE SE VE COMO TERMINAL
+       (fondo oscuro fijo), sin importar el tema
+       del sitio. Sin esto, la regla genérica de
+       arriba oscurecía el texto sobre un fondo
+       que también es oscuro → texto invisible.
+       ========================================== */
+    .terminal-window {
+      color: #c9d1d9 !important;
+
+      .window-title {
+        color: #8b949e !important;
+      }
+
+      .command {
+        color: #c9d1d9 !important;
+      }
+
+      .command .prompt {
+        color: #7ee787 !important;
+      }
+
+      .name {
+        color: #58a6ff !important;
+      }
+
+      .role {
+        color: #c9d1d9 !important;
+      }
+
+      .description {
+        color: #8b949e !important;
+      }
+
+      .btn-primary {
+        color: #c9d1d9 !important;
+      }
+
+      .btn-secondary {
+        color: #8b949e !important;
+      }
+
+      .function {
+        color: #d2a8ff !important;
+      }
+
+      .brackets {
+        color: #c9d1d9 !important;
+      }
     }
   }
 }

@@ -4,9 +4,8 @@
 
 .contact-container {
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   border: 1px solid var(--exp-border-color);
   border-radius: 12px;
@@ -21,15 +20,21 @@
     transform: translateY(-2px);
   }
 
-
-
   .contact-item {
     display: flex;
+    min-width: 0;
 
     .contact-info {
+      min-width: 0;
+
       h3 {
         font-weight: 700;
         margin: 0;
+      }
+
+      a,
+      span {
+        word-break: break-word;
       }
 
       a {

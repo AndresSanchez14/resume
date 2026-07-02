@@ -35,6 +35,11 @@ export class ShortResumeComponent implements OnInit, OnDestroy {
     this.downloadCvServiceService.downloadCV();
   }
 
+  scrollToContact(event: Event): void {
+    event.preventDefault();
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
 
   ngOnDestroy(): void {
     this.destroy$.next();

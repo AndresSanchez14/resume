@@ -9,12 +9,18 @@
       </div>
 
       <nav class="nav-links">
-        <a href="#aboutMe">{{ dataToFillResume.navMenu.aboutMe }}</a>
-        <a href="#education">{{ dataToFillResume.navMenu.education }}</a>
-        <a href="#experience">{{ dataToFillResume.navMenu.experience }}</a>
-        <a href="#skills">{{ dataToFillResume.navMenu.skills }}</a>
-        <a href="#projects">{{ dataToFillResume.navMenu.projects }}</a>
-        <a href="#contact">{{ dataToFillResume.navMenu.contact }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'aboutMe')">{{ dataToFillResume.navMenu.aboutMe
+          }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'education')">{{
+          dataToFillResume.navMenu.education }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'experience')">{{
+          dataToFillResume.navMenu.experience }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'skills')">{{ dataToFillResume.navMenu.skills
+          }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'projects')">{{ dataToFillResume.navMenu.projects
+          }}</a>
+        <a href="javascript:void(0)" (click)="scrollToSection($event, 'contact')">{{ dataToFillResume.navMenu.contact
+          }}</a>
       </nav>
 
       <div class="actions">
@@ -46,35 +52,45 @@
 
   <div class="home-container">
     <!-- START SHORT INTRODUCTION -->
-    <app-short-resume [dataToFillShortResume]="dataToFillResume.shortIntroduction">
-
-    </app-short-resume>
+    <section id="aboutMe" class="scroll-section">
+      <app-short-resume [dataToFillShortResume]="dataToFillResume.shortIntroduction">
+      </app-short-resume>
+    </section>
     <!--END SHORT INTRODUCTION -->
 
 
     <!-- START CONTACT INFO -->
-    <app-contact [dataToFillContactInfo]="dataToFillResume.contactInfo" class="contact-section">
-    </app-contact>
+    <section id="contact" class="scroll-section">
+      <app-contact [dataToFillContactInfo]="dataToFillResume.contactInfo" class="contact-section">
+      </app-contact>
+    </section>
+
     <!-- END CONTACT INFO -->
 
     <div class="education-skills-container">
 
       <!-- START EDUCATION INFO -->
 
-      <app-education style="height: 512px;" [dataToFillEducationInfo]="dataToFillResume.educationInfo">
-      </app-education>
+      <section id="education" class="scroll-section">
+        <app-education style="height: 512px;" [dataToFillEducationInfo]="dataToFillResume.educationInfo">
+        </app-education>
+      </section>
       <!-- END EDUCATION INFO -->
 
       <!-- START SKILLS INFO -->
-      <app-skills [dataToFillSkillsInfo]="dataToFillResume.skillsInfo" class="skills-section">
-      </app-skills>
+      <section id="skills" class="scroll-section">
+        <app-skills [dataToFillSkillsInfo]="dataToFillResume.skillsInfo" class="skills-section">
+        </app-skills>
+      </section>
       <!-- END SKILLS INFO -->
 
     </div>
     <!-- START WORK EXPERIENCE INFO -->
-    <app-work-experience [dataToFillWorkExperienceInfo]="dataToFillResume.workExperienceInfo"
-      class="experience-section">
-    </app-work-experience>
+    <section id="experience" class="scroll-section">
+      <app-work-experience [dataToFillWorkExperienceInfo]="dataToFillResume.workExperienceInfo"
+        class="experience-section">
+      </app-work-experience>
+    </section>
     <!-- END WORK EXPERIENCE INFO -->
   </div>
 </div>

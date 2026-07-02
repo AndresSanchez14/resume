@@ -39,17 +39,19 @@ export class LenguageSwitchService {
           skills: 'Skills',
           aboutMe: 'About',
           qualifications: 'Qualifications',
-          experience: 'Work Experience',
+          experience: 'Work_Experience',
           projects: 'Projects',
           contact: 'Contact'
         },
         shortIntroduction: {
+          name: 'Andrés Sánchez',
           title: 'Hi!! , I am Andrés Sánchez',
           description: `Developer with 3 years of experience building
           scalable web applications on AWS cloud and modern full stack solutions with Angular, NestJs, Spring Boot and other technologies. Passionate about technology and continuous learning, I am always looking for new challenges to keep growing professionally.`,
+          role: 'Cloud & Full Stack Developer',
           buttons: {
-            downloadCVText: 'Download CV',
-            sendEmailText: 'Email me'
+            downloadCVText: 'downloadCV',
+            sendEmailText: 'contactMe'
           }
         },
         contactInfo: {
@@ -82,7 +84,13 @@ export class LenguageSwitchService {
               degree: 'Front End Developer',
               institution: 'BIT - Bogotá Institute of Technology',
               year: '2023'
+            },
+            {
+              degree: 'Course of specialization in web development and modern technologies',
+              institution: 'Udemy',
+              year: '2023 - Current'
             }
+
           ]
         },
         skillsInfo: {
@@ -151,21 +159,23 @@ export class LenguageSwitchService {
       navMenu: {
         education: 'Educación',
         skills: 'Habilidades',
-        aboutMe: 'Acerca de mí',
+        aboutMe: 'Acerca_de_mí',
         qualifications: 'Trayectoria',
-        experience: 'Experiencia Laboral',
+        experience: 'Experiencia_Laboral',
         projects: 'Proyectos',
         contact: 'Contacto'
       },
       shortIntroduction: {
+        name: 'Andrés Sánchez',
         title: 'Hola!, soy Andrés Sánchez',
         description:`Desarrollador con 3 años de experiencia construyendo aplicaciones web escalables en la nube AWS
                     y soluciones full stack moderanas con Angular , NestJs, Spring Boot y otras tecnologías.
                     Apasionado por la tecnología y el aprendizaje continuo, siempre estoy buscando nuevos desafíos
                     para seguir creciendo profesionalmente.`,
+        role: 'Desarrollador Cloud & Full Stack',
         buttons: {
-          downloadCVText: 'Descargar CV',
-          sendEmailText: 'Contactarme'
+          downloadCVText: 'descargarCV',
+          sendEmailText: 'contactarme'
         }
       },
       contactInfo: {
@@ -197,7 +207,12 @@ export class LenguageSwitchService {
           {
             degree: 'Front End Developer',
             institution: 'BIT - Bogotá Institute of Technology',
-            year: '2023'
+            year: '2023-2023'
+          },
+          {
+            degree: 'Cursos de especialización en desarrollo web y tecnologías modernas',
+            institution: 'Udemy',
+            year: '2023 - actualidad'
           }
         ]
       },
