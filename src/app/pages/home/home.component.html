@@ -23,10 +23,22 @@
       <div class="actions">
 
         <!-- LANGUAGE -->
-        <mat-button-toggle-group value="spanish" [hideSingleSelectionIndicator]="true"
+        <!-- <mat-button-toggle-group value="spanish" [hideSingleSelectionIndicator]="true"
           (change)="onChangueLenguageSelected($event)">
           <mat-button-toggle value="spanish">ES</mat-button-toggle>
           <mat-button-toggle value="english">EN</mat-button-toggle>
+        </mat-button-toggle-group> -->
+        <mat-button-toggle-group class="language-toggle" value="spanish" [hideSingleSelectionIndicator]="true"
+          (change)="onChangueLenguageSelected($event)">
+
+          <mat-button-toggle value="spanish" class="img-container">
+            <img src="assets/images/flag_col.svg" alt="Español" class="flag" />
+          </mat-button-toggle>
+
+          <mat-button-toggle value="english" class="img-container">
+            <img src="assets/images/flag_usa.svg" alt="English" class="flag" />
+          </mat-button-toggle>
+
         </mat-button-toggle-group>
         <!-- DARK MODE -->
         <button mat-icon-button (click)="toggleTheme()">

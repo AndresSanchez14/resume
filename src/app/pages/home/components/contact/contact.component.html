@@ -25,14 +25,19 @@
     <i class="fa-brands fa-linkedin contact-icon"></i>
     <div class="contact-info">
       <h3>{{ dataToFillContactInfo.linkedinLabel }}</h3>
-      <span>{{ dataToFillContactInfo.linkedin }}</span>
+      <a href="{{ dataToFillContactInfo.linkedin }}" target="_blank" rel="noopener noreferrer">
+        <span>{{ dataToFillContactInfo.linkedin }}</span>
+      </a>
     </div>
   </div>
   <div class="contact-item">
+
     <i class="fa-brands fa-github contact-icon"></i>
     <div class="contact-info">
       <h3>{{ dataToFillContactInfo.githubLabel }}</h3>
-      <span>{{ dataToFillContactInfo.github }}</span>
+      <a href="{{ dataToFillContactInfo.github }}" target="_blank" rel="noopener noreferrer">
+        <span>{{ dataToFillContactInfo.github }}</span>
+      </a>
     </div>
   </div>
 </div>

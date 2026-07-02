@@ -8,8 +8,8 @@
 ========================= */
 
 :root {
-  --font-title: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-title: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', roboto, sans-serif;
   --text-primary: #111827;
   --text-secondary: #374151;
   --text-muted: #6B7280;
@@ -136,13 +136,13 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
-  color: var(--link-color);
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
 }
 
 h1 {
+  color: var(--link-color);
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
@@ -159,13 +159,14 @@ p {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   transition: color .25s ease;
 }
 
 a:hover {
+  color: var(--link-color);
   text-decoration: underline;
 }
 
