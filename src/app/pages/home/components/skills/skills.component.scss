@@ -1,8 +1,4 @@
 .skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
   border: 1px solid var(--exp-border-color);
   border-radius: 12px;
   padding: 1.5rem;
@@ -10,6 +6,7 @@
   background: var(--exp-background);
   box-shadow: var(--exp-shadow-1), var(--exp-shadow-2), var(--exp-inset);
   transition: all 0.3s ease;
+
 
   &:hover {
     box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);

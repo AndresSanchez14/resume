@@ -171,8 +171,7 @@ html {
   .mat-mdc-card,
   .mat-card,
   app-contact>div,
-  app-education>div,
-  app-skills>div {
+  app-education>div {
     background-color: rgba(22, 27, 34, 0.7) !important;
     border-radius: 10px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
@@ -256,12 +255,10 @@ html {
       }
     }
 
-    /* Modificamos el fondo e invertimos los colores de las tarjetas */
     .mat-mdc-card,
     .mat-card,
     app-contact>div,
-    app-education>div,
-    app-skills>div {
+    app-education>div {
       background-color: #ffffff !important;
       border: 1px solid rgba(0, 0, 0, 0.08) !important;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
@@ -269,7 +266,6 @@ html {
     }
 
     p,
-    span,
     .text-muted,
     mat-icon,
     h4,
@@ -277,14 +273,11 @@ html {
     li,
     div,
     th,
-    td,
-    a {
+    td {
       color: #24292f !important;
     }
 
-    h2 {
-      color: #0969da !important;
-    }
+
 
     .mat-mdc-chip,
     .mat-chip {
@@ -299,13 +292,6 @@ html {
       }
     }
 
-    /* ==========================================
-       LA TERMINAL SIEMPRE SE VE COMO TERMINAL
-       (fondo oscuro fijo), sin importar el tema
-       del sitio. Sin esto, la regla genérica de
-       arriba oscurecía el texto sobre un fondo
-       que también es oscuro → texto invisible.
-       ========================================== */
     .terminal-window {
       color: #c9d1d9 !important;
 

@@ -6,13 +6,13 @@
   background: var(--exp-background);
   box-shadow: var(--exp-shadow-1), var(--exp-shadow-2), var(--exp-inset);
   transition: all 0.3s ease;
+  width: 100%;
 
   &:hover {
     box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);
     transform: translateY(-2px);
   }
 
-  width: 100%;
 
   .contact-title {
     margin-bottom: 3rem;

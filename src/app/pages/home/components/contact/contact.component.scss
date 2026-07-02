@@ -17,7 +17,7 @@
 
   &:hover {
     box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
   }
 
   .contact-item {
@@ -45,6 +45,7 @@
         &:hover {
           color: var(--link-color);
         }
+
       }
     }
 
