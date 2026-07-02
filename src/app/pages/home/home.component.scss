@@ -86,16 +86,11 @@
   background: var(--exp-background);
   border: 1px solid var(--exp-border-color);
   box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);
-  //padding: 4px;
 
   .img-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    // width: 30px;
-    // height: 22px;
-    // border-radius: 4px;
-    // transition: all .35s ease;
 
   }
 }
