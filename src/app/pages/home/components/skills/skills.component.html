@@ -1,0 +1,54 @@
+<div id="skills">
+  <div class="skills-container">
+    <h1 class="contact-title"> {{ dataToFillSkillsInfo.skillsTitle }}</h1>
+    <div class="skill-container">
+      <div>
+        <h2>{{ dataToFillSkillsInfo.languageTitle }}</h2>
+      </div>
+      <div class="skills-list">
+        @for (language of dataToFillSkillsInfo.languageList; track language) {
+        <div class="skill-item">
+          <h3>{{ language }}</h3>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <div>
+        <h2>{{ dataToFillSkillsInfo.frontEndTitle }}</h2>
+      </div>
+      <div class="skills-list">
+        @for (technology of dataToFillSkillsInfo.frontEndList; track technology) {
+        <div class="skill-item">
+          <h3>{{ technology }}</h3>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <div>
+        <h2>{{ dataToFillSkillsInfo.backEndTitle }}</h2>
+      </div>
+      <div class="skills-list">
+        @for (technology of dataToFillSkillsInfo.backEndList; track technology) {
+        <div class="skill-item">
+          <h3>{{ technology }}</h3>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <div>
+        <h2>{{ dataToFillSkillsInfo.cloudTitle }}</h2>
+      </div>
+      <div class="skills-list">
+        @for (technology of dataToFillSkillsInfo.cloudList; track technology) {
+        <div class="skill-item">
+          <h3>{{ technology }}</h3>
+        </div>
+        }
+      </div>
+    </div>

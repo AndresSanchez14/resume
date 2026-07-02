@@ -1,0 +1,77 @@
+<div class="main-container">
+
+  <!-- START HEADER -->
+  <div class="header">
+    <mat-toolbar class="navbar">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="/">Andres.dev</a>
+      </div>
+
+      <!-- MENU -->
+      <nav class="nav-links">
+        <a href="#aboutMe">{{ dataToFillResume.navMenu.aboutMe }}</a>
+        <a href="#education">{{ dataToFillResume.navMenu.education }}</a>
+        <a href="#experience">{{ dataToFillResume.navMenu.experience }}</a>
+        <a href="#skills">{{ dataToFillResume.navMenu.skills }}</a>
+        <a href="#projects">{{ dataToFillResume.navMenu.projects }}</a>
+        <a href="#contact">{{ dataToFillResume.navMenu.contact }}</a>
+      </nav>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+
+        <!-- LANGUAGE -->
+        <mat-button-toggle-group value="spanish" [hideSingleSelectionIndicator]="true"
+          (change)="onChangueLenguageSelected($event)">
+          <mat-button-toggle value="spanish">ES</mat-button-toggle>
+          <mat-button-toggle value="english">EN</mat-button-toggle>
+        </mat-button-toggle-group>
+        <!-- DARK MODE -->
+        <button mat-icon-button (click)="toggleTheme()">
+          <mat-icon>
+            {{ darkMode ? 'light_mode' : 'dark_mode' }}
+          </mat-icon>
+        </button>
+
+      </div>
+
+    </mat-toolbar>
+  </div>
+  <!-- END HEADER -->
+
+  <div class="home-container">
+    <!-- START SHORT INTRODUCTION -->
+    <app-short-resume [dataToFillShortResume]="dataToFillResume.shortIntroduction">
+
+    </app-short-resume>
+    <!--END SHORT INTRODUCTION -->
+
+
+    <!-- START CONTACT INFO -->
+    <app-contact [dataToFillContactInfo]="dataToFillResume.contactInfo" class="contact-section">
+    </app-contact>
+    <!-- END CONTACT INFO -->
+
+    <div class="education-skills-container">
+
+      <!-- START EDUCATION INFO -->
+
+      <app-education style="height: 512px;" [dataToFillEducationInfo]="dataToFillResume.educationInfo">
+      </app-education>
+      <!-- END EDUCATION INFO -->
+
+      <!-- START SKILLS INFO -->
+      <app-skills [dataToFillSkillsInfo]="dataToFillResume.skillsInfo" class="skills-section">
+      </app-skills>
+      <!-- END SKILLS INFO -->
+
+    </div>
+    <!-- START WORK EXPERIENCE INFO -->
+    <app-work-experience [dataToFillWorkExperienceInfo]="dataToFillResume.workExperienceInfo"
+      class="experience-section">
+    </app-work-experience>
+    <!-- END WORK EXPERIENCE INFO -->
+  </div>
+</div>

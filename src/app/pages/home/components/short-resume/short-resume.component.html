@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="short-introduction">
+    <div class="image-container">
+      <img src="assets/photoProfile.png" alt="profile_image" class="profile-image" width="200" height="200">
+    </div>
+    <div class="introduction-text">
+      <h1>Andres Sanchez</h1>
+      <p>Full Stack Developer | Cloud Developer</p>
+      <p>{{ dataToFillShortResume.description}}
+      </p>
+      <div class="buttons-short-introduction">
+        <button mat-raised-button color="primary" (click)="downloadCV()">
+          {{ dataToFillShortResume.buttons.downloadCVText }}
+          <mat-icon>download</mat-icon>
+        </button>
+        <button mat-stroked-button color="primary" (click)="downloadCV()">
+          <mat-icon>email</mat-icon>
+          {{ dataToFillShortResume.buttons.sendEmailText }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="logos">
+    <img src="assets/logos/angular-logo.png" alt="Angular Logo" class="logo-image">
+    <img src="assets/logos/react-logo.png" alt="React Logo" class="logo-image">
+    <img src="assets/logos/flask-logo.png" alt="TypeScript Logo" class="logo-image">
+    <img src="assets/logos/nestJs-logo.png" alt="NestJS Logo" class="logo-image">
+    <img src="assets/logos/spring-logo.png" alt="Spring Logo" class="logo-image">
+    <img src="assets/logos/aws-logo.png" alt="AWS Logo" class="logo-image">
+    <img src="assets/logos/postgrest-logo.png" alt="PostgreSQL Logo" class="logo-image">
+    <img src="assets/logos/dynamoDB-logo.png" alt="DynamoDB Logo" class="logo-image">
+  </div>
+</div>

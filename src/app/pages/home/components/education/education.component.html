@@ -1,0 +1,19 @@
+<div class="education-section">
+  <h1 class="contact-title">{{ dataToFillEducationInfo.educationTitle }}</h1>
+  @for (education of dataToFillEducationInfo.educationList; track education) {
+  <div class="education-container">
+    <div>
+      <span class="material-symbols-outlined">
+        school
+      </span>
+    </div>
+    <div class="education-item">
+      <h3>{{ education.degree }}</h3>
+      <div class="education-details">
+        <p>{{ education.institution }}</p>
+        <p>{{ education.year }}</p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

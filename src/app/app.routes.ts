@@ -8,6 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'resume',
-    loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent)
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
   }
 ];

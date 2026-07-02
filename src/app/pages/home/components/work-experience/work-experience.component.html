@@ -1,0 +1,25 @@
+<div class="experience-section">
+  <h1 class="contact-title">{{ dataToFillWorkExperienceInfo.experienceTitle }}</h1>
+  <div class="experience-container">
+    <ul class="experience">
+      @for (experience of dataToFillWorkExperienceInfo.experienceList; track experience) {
+      <li>
+        <span class="material-symbols-outlined">
+          smart_toy
+        </span>
+        <div class="experience-item">
+          <h2 style="margin: 0;">{{ experience.position }}</h2>
+          <h3 style="margin: 0;">{{ experience.company }}</h3>
+          <span>{{ experience.duration }}</span>
+          <ul class="tasks">
+            @for (task of experience.tasks; track task) {
+            <li> <span class="material-symbols-outlined">
+                integration_instructions
+              </span>{{ task }}</li>
+            }
+          </ul>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
