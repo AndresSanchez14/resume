@@ -228,3 +228,46 @@ h3 {
 .material-symbols-outlined {
   font-size: 28px;
 }
+
+
+/* Teléfonos grandes */
+@media (min-width: 480px) {
+  .material-symbols-outlined {
+    font-size: 26px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  .material-symbols-outlined {
+    font-size: 28px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+
+  /* A partir de aquí se recupera por completo el layout de
+     escritorio original; los componentes internos definen sus
+     propios ajustes finos en este mismo breakpoint. */
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+
+  /* El ancho de lectura se sigue acotando mediante max-width
+     en los contenedores principales (ver home.component.scss). */
+}
+
+/* Monitores grandes */
+@media (min-width: 1440px) {
+
+  /* Los contenedores principales ya usan max-width para evitar
+     que el contenido se estire en exceso en pantallas muy anchas. */
+}

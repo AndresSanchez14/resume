@@ -1,3 +1,8 @@
+:host {
+  display: block;
+}
+
+
 .education-section {
   border: 1px solid var(--exp-border-color);
   border-radius: 12px;
@@ -6,7 +11,7 @@
   background: var(--exp-background);
   box-shadow: var(--exp-shadow-1), var(--exp-shadow-2), var(--exp-inset);
   transition: all 0.3s ease;
-  width: 100%;
+
 
   &:hover {
     box-shadow: var(--exp-shadow-hover-1), var(--exp-shadow-hover-2), var(--exp-inset);
@@ -34,5 +39,25 @@
 
       }
     }
+  }
+}
+
+/* Tablets: recuperamos aire vertical en el título */
+@media (min-width: 768px) {
+  .education-section {
+    padding: 1.5rem;
+
+    .contact-title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+/* Laptops: layout de dos columnas activo (ver home.component.scss);
+   se fija una altura mínima para alinear visualmente con la tarjeta
+   de skills, igual que en el diseño de escritorio original. */
+@media (min-width: 1024px) {
+  :host {
+    height: 512px;
   }
 }

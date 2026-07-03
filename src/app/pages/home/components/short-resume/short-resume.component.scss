@@ -168,3 +168,76 @@
     }
   }
 }
+
+
+/* Teléfonos grandes */
+@media (min-width: 480px) {
+  .terminal-body {
+    padding: 1.5rem;
+
+    .command {
+      font-size: 0.95rem;
+    }
+
+    .role {
+      font-size: 1.25rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+
+  .terminal-actions {
+    gap: 1rem;
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 1.5rem 0;
+  }
+
+  .terminal-body {
+    .avatar {
+      width: 88px;
+      height: 88px;
+    }
+
+    .command {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Laptops: valores originales de escritorio */
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .terminal-body {
+    padding: 2rem;
+
+    .identity {
+      gap: 1.25rem;
+    }
+  }
+
+  .terminal-actions {
+    margin-top: 2.5rem;
+  }
+
+  .terminal-body .name {
+    /* Restaura el clamp original de escritorio (evita que el 8vw
+       usado en mobile agrande el título más de lo previsto). */
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+  }
+}

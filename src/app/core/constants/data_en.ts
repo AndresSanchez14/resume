@@ -11,8 +11,11 @@ export const data_en = {
   shortIntroduction: {
     name: 'Andrés Sánchez',
     title: 'Hi!! , I am Andrés Sánchez',
-    description: `Developer with 3 years of experience building
-          scalable web applications on AWS cloud and modern full stack solutions with Angular, NestJs, Spring Boot and other technologies. Passionate about technology and continuous learning, I am always looking for new challenges to keep growing professionally.`,
+    description: `Electronic Engineer and Cloud/Full Stack Developer with experience in Angular,
+                  NestJS, Spring Boot, and AWS. Skilled in relational databases and well-versed in a wide range
+                  of market frameworks, both Front-end and Back-end. My experience leading teams and planning
+                  projects has allowed me to perform with a high level of responsibility, leadership, and creativity,
+                  fostering a better work environment and the achievement of business goals.`,
     role: 'Cloud & Full Stack Developer',
     buttons: {
       downloadCVText: 'downloadCV',
@@ -96,13 +99,23 @@ export const data_en = {
     experienceTitle: 'Work Experience',
     experienceList: [
       {
-        position: 'Middle Cloud Developer/Full Stack Developer',
-        company: 'Bank of Bogota',
-        duration: '10/2023 - current',
+        position: 'Middle Software Developer',
+        company: 'Banco de Bogotá',
+        duration: '11/2025 - Present',
+        tasks: [
+          'Developed frontend web applications using Angular with TypeScript, implementing reusable components with Stencil.js to maintain design consistency across the bank.',
+          'Built RESTful APIs with Node.js, Express.js, NestJS, and Spring Boot, implementing hexagonal architecture and microservices architecture.',
+          'Implemented serverless functions using AWS Lambda integrated with Amazon API Gateway for secure service exposure, connecting to S3 and CloudFront.'
+        ]
+      },
+      {
+        position: 'Junior Software Developer',
+        company: 'Banco de Bogotá',
+        duration: '10/2023 - 11/2025',
         tasks: [
           'Developed and maintained web applications using Angular and other technologies.',
-          'Collaborated with cross-functional teams to design and implement new features.',
-          'Participated in code reviews and provided constructive feedback to team members.'
+          'Participated in code reviews, providing constructive feedback to the team.',
+          'Supported software infrastructure and area processes.'
         ]
       },
       {
@@ -110,9 +123,9 @@ export const data_en = {
         company: 'Inxait',
         duration: '04/2023 - 10/2023',
         tasks: [
-          'Analyzed and interpreted complex data sets to provide insights and recommendations.',
-          'Created data visualizations and reports to communicate findings to stakeholders.',
-          'Collaborated with cross-functional teams to identify business opportunities and optimize processes.'
+          'Built algorithms and functions in SQL Server and Python for data standardization.',
+          'Designed relational database models (ERD) in SQL Server.',
+          'Analyzed and interpreted datasets to generate insights and recommendations.'
         ]
       }
     ]

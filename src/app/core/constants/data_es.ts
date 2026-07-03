@@ -10,10 +10,11 @@ export const data_es = {
   shortIntroduction: {
     name: 'Andrés Sánchez',
     title: 'Hola!, soy Andrés Sánchez',
-    description:`Desarrollador con 3 años de experiencia construyendo aplicaciones web escalables en la nube AWS
-                    y soluciones full stack moderanas con Angular , NestJs, Spring Boot y otras tecnologías.
-                    Apasionado por la tecnología y el aprendizaje continuo, siempre estoy buscando nuevos desafíos
-                    para seguir creciendo profesionalmente.`,
+    description: `Ingeniero electrónico y desarrollador Cloud/Full Stack con experiencia en Angular,
+                  NestJS, Spring Boot y AWS. Manejo bases de datos relacionales y cuento con conocimiento amplio
+                  de múltiples frameworks del mercado, tanto en Front-end como en Back-end. Mi experiencia liderando
+                  personal y planificando proyectos me ha permitido desempeñarme con un alto nivel de responsabilidad,
+                  liderazgo y creatividad, impulsando un mejor ambiente laboral y el cumplimiento de metas empresariales.`,
     role: 'Desarrollador Cloud & Full Stack',
     buttons: {
       downloadCVText: 'descargarCV',
@@ -97,13 +98,23 @@ export const data_es = {
     experienceTitle: 'Experiencia Laboral',
     experienceList: [
       {
-        position: 'Desarrollador Middle Cloud/Full Stack',
+        position: 'Middle Software Developer',
         company: 'Banco de Bogotá',
-        duration: '10/2023 - actualidad',
+        duration: '11/2025 - actualidad',
         tasks: [
-          'Desarrollé y mantuve aplicaciones web utilizando Angular y otras tecnologías.',
-          'Colaboré con equipos multifuncionales para diseñar e implementar nuevas funcionalidades.',
-          'Participé en revisiones de código y proporcioné retroalimentación constructiva a los miembros del equipo.'
+          'Desarrollo de aplicaciones web frontend utilizando Angular con TypeScript, implementando componentes reutilizables con Stencil.js para mantener consistencia en el diseño del banco.',
+          'Construcción de APIs RESTful con Node.js, Express.js, NestJS y Spring Boot, implementando arquitectura hexagonal y arquitectura de microservicios.',
+          'Implementación de funciones serverless utilizando AWS Lambda integradas con Amazon API Gateway para exposición segura de servicios, con conexión a S3 y CloudFront.'
+        ]
+      },
+      {
+        position: 'Junior Software Developer',
+        company: 'Banco de Bogotá',
+        duration: '10/2023 - 11/2025',
+        tasks: [
+          'Desarrollo y mantenimiento de aplicaciones web utilizando Angular y otras tecnologías.',
+          'Participación en revisiones de código, aportando retroalimentación constructiva al equipo.',
+          'Apoyo en infraestructura de software y procesos del área.'
         ]
       },
       {
@@ -111,9 +122,9 @@ export const data_es = {
         company: 'Inxait',
         duration: '04/2023 - 10/2023',
         tasks: [
-          'Analicé e interpreté conjuntos de datos complejos para proporcionar insights y recomendaciones.',
-          'Creé visualizaciones de datos e informes para comunicar hallazgos a los interesados.',
-          'Colaboré con equipos multifuncionales para identificar oportunidades de negocio y optimizar procesos.'
+          'Creación de algoritmos y funciones en SQL Server y Python para la estandarización de datos.',
+          'Modelamiento de bases de datos relacionales (MER) en SQL Server.',
+          'Análisis e interpretación de conjuntos de datos para generar insights y recomendaciones.'
         ]
       }
     ]

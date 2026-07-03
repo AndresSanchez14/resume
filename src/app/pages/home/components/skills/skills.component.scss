@@ -46,3 +46,82 @@
   margin: 0;
   /* Quitamos el margen por defecto para que no se vea chueco */
 }
+
+
+/* Tablets */
+@media (min-width: 768px) {
+  .skills-container {
+    padding: 1.5rem;
+
+    .skills-list {
+      gap: 16px;
+    }
+  }
+}
+
+/* Laptops: valores originales de escritorio */
+@media (min-width: 1024px) {
+  .skills-container .skills-list {
+    gap: 20px;
+
+    .skill-item {
+      padding: 10px;
+    }
+  }
+}
+
+
+/* Teléfonos grandes */
+@media (min-width: 480px) {
+  .experience-section {
+    padding: 1.5rem;
+
+    .experience-container {
+      padding-left: 1rem;
+
+      .experience .tasks li {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .experience-section {
+    .contact-title {
+      margin-bottom: 2rem;
+    }
+
+    .experience-container {
+      padding-left: 1.5rem;
+
+      .experience {
+        padding-left: 1.25rem;
+      }
+
+      .experience .tasks {
+        padding-left: 1.25rem;
+      }
+    }
+  }
+}
+
+/* Laptops: valores originales de escritorio */
+@media (min-width: 1024px) {
+  .experience-section .experience-container {
+    padding-left: 2rem;
+
+    .experience {
+      padding-left: 1.5rem;
+    }
+
+    .experience .tasks {
+      padding-left: 1.5rem;
+    }
+
+    .experience .tasks li {
+      font-size: 1.05rem;
+    }
+  }
+}

@@ -56,3 +56,22 @@
     }
   }
 }
+
+@media (min-width: 480px) {
+  .contact-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .contact-title {
+    margin-bottom: 2rem;
+  }
+
+  .contact-container {
+    gap: 1.5rem;
+  }
+}
