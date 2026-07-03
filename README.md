@@ -31,7 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Generate build
 
---configuration production --base-href="/resume/"
+ng build --configuration production --base-href="/resume/"
 
 release  page
 
