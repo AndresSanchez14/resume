@@ -10,12 +10,11 @@ export const data_es = {
   shortIntroduction: {
     name: 'Andrés Sánchez',
     title: 'Hola!, soy Andrés Sánchez',
-    description: `Ingeniero electrónico y desarrollador Cloud/Full Stack con experiencia en Angular,
-                  NestJS, Spring Boot y AWS. Manejo bases de datos relacionales y cuento con conocimiento amplio
-                  de múltiples frameworks del mercado, tanto en Front-end como en Back-end. Mi experiencia liderando
-                  personal y planificando proyectos me ha permitido desempeñarme con un alto nivel de responsabilidad,
+    description: `Desarrollador Cloud/Full Stack e Ingeniero Electrónico con experiencia en Angular, NestJS, Spring Boot y AWS.
+                  Manejo bases de datos relacionales y no relacionales,
+                  cuento con conocimiento amplio de múltiples frameworks del mercado, tanto en Front-end como en Back-end.
+                  Mi experiencia liderando personal y planificando proyectos me ha permitido desempeñarme con un alto nivel de responsabilidad,
                   liderazgo y creatividad, impulsando un mejor ambiente laboral y el cumplimiento de metas empresariales.`,
-    role: 'Desarrollador Cloud & Full Stack',
     buttons: {
       downloadCVText: 'descargarCV',
       sendEmailText: 'contactarme'
@@ -38,7 +37,7 @@ export const data_es = {
     educationTitle: 'Educación',
     educationList: [
       {
-        degree: 'Ingeniería de electrónica',
+        degree: 'Ingeniería electrónica',
         institution: 'Universidad Cooperativa de Colombia',
         year: '2015 - 2020'
       },
@@ -91,7 +90,8 @@ export const data_es = {
       'Api Gateway',
       'Cognito',
       'DynamoDB',
-      'ECS'
+      'ECS',
+      'RDS'
     ]
   },
   workExperienceInfo: {
@@ -124,7 +124,7 @@ export const data_es = {
         tasks: [
           'Creación de algoritmos y funciones en SQL Server y Python para la estandarización de datos.',
           'Modelamiento de bases de datos relacionales (MER) en SQL Server.',
-          'Análisis e interpretación de conjuntos de datos para generar insights y recomendaciones.'
+          'Creación de Dashboards mediante el uso de Power BI.',
         ]
       }
     ]

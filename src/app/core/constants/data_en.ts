@@ -11,8 +11,8 @@ export const data_en = {
   shortIntroduction: {
     name: 'Andrés Sánchez',
     title: 'Hi!! , I am Andrés Sánchez',
-    description: `Electronic Engineer and Cloud/Full Stack Developer with experience in Angular,
-                  NestJS, Spring Boot, and AWS. Skilled in relational databases and well-versed in a wide range
+    description: `Cloud/Full Stack Developer and  Electronic Engineer with experience in Angular,
+                  NestJS, Spring Boot, and AWS. Skilled in relational databases and no relational databases, well-versed in a wide range
                   of market frameworks, both Front-end and Back-end. My experience leading teams and planning
                   projects has allowed me to perform with a high level of responsibility, leadership, and creativity,
                   fostering a better work environment and the achievement of business goals.`,
@@ -39,7 +39,7 @@ export const data_en = {
     educationTitle: 'Education',
     educationList: [
       {
-        degree: 'Electronics engineering',
+        degree: 'Electronic engineering',
         institution: 'Universidad Cooperativa de Colombia',
         year: '2015 - 2020'
       },
@@ -56,7 +56,7 @@ export const data_en = {
       {
         degree: 'Course of specialization in web development and modern technologies',
         institution: 'Udemy',
-        year: '2023 - Current'
+        year: '2023 - Actually'
       }
     ]
   },
@@ -92,7 +92,8 @@ export const data_en = {
       'Api Gateway',
       'Cognito',
       'DynamoDB',
-      'ECS'
+      'ECS',
+      'RDS'
     ]
   },
   workExperienceInfo: {
@@ -101,7 +102,7 @@ export const data_en = {
       {
         position: 'Middle Software Developer',
         company: 'Banco de Bogotá',
-        duration: '11/2025 - Present',
+        duration: '11/2025 - Actually',
         tasks: [
           'Developed frontend web applications using Angular with TypeScript, implementing reusable components with Stencil.js to maintain design consistency across the bank.',
           'Built RESTful APIs with Node.js, Express.js, NestJS, and Spring Boot, implementing hexagonal architecture and microservices architecture.',
@@ -125,7 +126,7 @@ export const data_en = {
         tasks: [
           'Built algorithms and functions in SQL Server and Python for data standardization.',
           'Designed relational database models (ERD) in SQL Server.',
-          'Analyzed and interpreted datasets to generate insights and recommendations.'
+          'Created dashboards using Power BI.'
         ]
       }
     ]

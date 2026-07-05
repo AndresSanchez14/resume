@@ -21,7 +21,8 @@ const DEVICON_MAP: Record<string, string> = {
   'api gateway': 'amazonwebservices',
   'cognito': 'amazonwebservices',
   'dynamodb': 'amazonwebservices',
-  'ecs': 'amazonwebservices'
+  'ecs': 'amazonwebservices',
+  'rds': 'amazonwebservices',
 };
 
 
